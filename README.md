@@ -8,8 +8,8 @@ Inspired from [vest-kits (laravel)](https://github.com/vest-kits/laravel) by [Nu
 
 - **Laravel 12.x**
 - **Filament 3.x**
-- **Tailwind CSS**
-- **Livewire**
+- **Livewire 3.x**
+- **Tailwind CSS 4.x**
 - **Pest PHP**
 - **PHPStan**
 - **Rector**
@@ -100,10 +100,11 @@ composer refactor
 - [Laravel Documentation](https://laravel.com/docs)
 - [Laravel Pint Documentation](https://laravel.com/docs/12.x/pint)
 - [Filament Documentation](https://filamentphp.com/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Pest PHP Documentation](https://pestphp.com/docs)
-- [Rector Documentation](https://github.com/rectorphp/rector)
+- [Rector Documentation](https://getrector.com/documentation)
+- [Rector Laravel Documentation](https://github.com/driftingly/rector-laravel)
 - [PHPStan Documentation](https://phpstan.org)
 - [Laravel Persian Validation](https://github.com/sadegh19b/laravel-persian-validation)
 
