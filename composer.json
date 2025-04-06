@@ -11,10 +11,12 @@
         "filament/spatie-laravel-media-library-plugin": "^3.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "livewire/livewire": "^3.6",
         "sadegh19b/laravel-persian-lang": "^12.0",
         "sadegh19b/laravel-persian-validation": "^2.0"
     },
     "require-dev": {
+        "driftingly/rector-laravel": "^2.0",
         "fakerphp/faker": "^1.23",
         "larastan/larastan": "^3.2",
         "laravel/pail": "^1.2.2",
