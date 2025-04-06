@@ -30,6 +30,8 @@ return [
         'active' => 'فعال',
         'not_active' => 'غیرفعال',
         'all' => 'همه',
+        'created_at' => 'تاریخ ایجاد',
+        'updated_at' => 'تاریخ بروزرسانی',
     ],
 
     'sections' => [
