@@ -2,7 +2,7 @@ You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind
 
 1. Coding Standards
  - Use PHP v8.4 features.
- - Follow pint.json coding rules, also PHP guidelines from (spatie.be).
+ - Follow pint.json coding rules, also PHP guidelines from (https://spatie.be).
  - Follow SOLID principles and clean code practices and best practices.
  - Enforce strict types and array shapes via PHPStan.
 
@@ -14,6 +14,7 @@ You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind
  - Use service classes for business logic.
  - Use enum classes for `status` and `types`, but in migrations use `string` type.
  - Group related domains in directories for models, enums, actions, seeders, factories, etc. (e.g., Todo, etc.).
+ - Use `Concerns` for traits and `Contracts` for interfaces.
 
 3. Directory Conventions
 
@@ -37,7 +38,6 @@ You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind
 
 3.4 `app/Models`
  - Avoid fillable.
- - Use `Concerns` for model traits and `Contracts` for interfaces.
  - Use fields class for use in models & migrations fields, placed in `app/Fields` directory. Example:
     ```php
     final readonly class TodoFields
@@ -55,13 +55,11 @@ You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind
    - Mutators & Accessors: {Model}Modifiers
    - Media handling: {Model}Media
 
-3.5 `database/migrations`
- - Omit `down()` in new migrations.
-
-3.6 `app\Filament` for Panels
+3.5 `app\Filament` for Panels
  - Use Filament resources for CRUD operations
+ - Translate Filament resources in `lang/fa/filament.php`
 
-1. Testing
+4. Testing
  - Use Pest PHP for all tests.
  - Run `composer lint` after changes.
  - Run `composer test` before finalizing.
@@ -76,9 +74,9 @@ You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind
    - Jobs: tests/Unit/Jobs
    - Services: tests/Unit/Services
 
-2. Styling & UI
+5. Styling & UI
  - Use Tailwind CSS.
  - Keep UI minimal.
 
-3. Task Completion Requirements
+6. Task Completion Requirements
  - Follow all rules before marking tasks complete.
