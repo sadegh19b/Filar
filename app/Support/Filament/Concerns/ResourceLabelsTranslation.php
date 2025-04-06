@@ -41,7 +41,7 @@ trait ResourceLabelsTranslation
         }
 
         $resourceName = Str::kebab(str_replace('Resource', '', class_basename(static::class)));
-        $transKey = "filament.resources.{$resourceName}.resource.{$type}";
+        $transKey = "filament.resources.{$resourceName}.{$type}";
 
         if (! Lang::has($transKey)) {
             return null;
