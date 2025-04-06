@@ -8,6 +8,9 @@ use App\Fields\UserFields;
 use Carbon\CarbonInterface;
 use Database\Factories\User\UserFactory;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasAvatar;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,7 +25,7 @@ use Illuminate\Notifications\Notifiable;
  * @property-read CarbonInterface $created_at
  * @property-read CarbonInterface $updated_at
  */
-final class User extends Authenticatable
+final class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
@@ -48,5 +51,15 @@ final class User extends Authenticatable
             UserFields::EMAIL_VERIFIED_AT => 'datetime',
             UserFields::PASSWORD => 'hashed',
         ];
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
+    }
+
+    public function getFilamentAvatarUrl(): ?string
+    {
+        return asset('images/default-avatar.png');
     }
 }
