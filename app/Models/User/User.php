@@ -58,7 +58,7 @@ final class User extends Authenticatable implements FilamentUser, HasAvatar
         return true;
     }
 
-    public function getFilamentAvatarUrl(): ?string
+    public function getFilamentAvatarUrl(): string
     {
         return asset('images/default-avatar.png');
     }

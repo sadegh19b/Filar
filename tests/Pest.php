@@ -13,7 +13,10 @@ declare(strict_types=1);
 |
 */
 
+use Filament\Facades\Filament;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Sleep;
+use Illuminate\Support\Str;
 
 pest()->extend(Tests\TestCase::class)
     ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
@@ -24,6 +27,13 @@ pest()->extend(Tests\TestCase::class)
         Sleep::fake();
 
         $this->freezeTime();
+
+        // Configure Filament for testing
+        if (class_exists(Filament::class)) {
+            Filament::setCurrentPanel(
+                Filament::getPanel('admin')
+            );
+        }
     })
     ->in('Feature', 'Unit');
 
@@ -40,6 +50,16 @@ pest()->extend(Tests\TestCase::class)
 
 expect()->extend('toBeOne', function () {
     return $this->toBe(1);
+});
+
+expect()->extend('toUseTraits', function (array $traits) {
+    foreach ($traits as $trait) {
+        if (! in_array($trait, class_uses_recursive($this->value), true)) {
+            throw new Exception('Failed asserting that class uses specified trait.');
+        }
+    }
+
+    return $this;
 });
 
 /*
