@@ -21,6 +21,7 @@
             <file>app/Providers/AppServiceProvider.php</file>
             <directory>app/Enums</directory>
             <directory>app/Fields</directory>
+            <directory>app/Icons</directory>
         </exclude>
     </source>
     <php>

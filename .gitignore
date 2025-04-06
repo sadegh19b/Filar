@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/storage/media-library/temp
 /vendor
 .env
 .env.backup

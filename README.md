@@ -63,6 +63,12 @@ php artisan migrate
 php artisan serve
 ```
 
+**Note**: For better performance, suggest to use the below commands to cache icons and components:
+```bash
+php artisan icons:cache
+php artisan filament:cache-components
+```
+
 ## 🏗 Project Structure
 
 ```
@@ -73,6 +79,7 @@ app/
 ├── Filament/        # Filament admin panel resources
 ├── Http/
 │   ├── Controllers/
+├── Icons/           # Blade ui kit icons (heroicons)
 ├── Models/          # Eloquent models
 ├── Services/        # Service classes
 └── Support/         # Support classes
@@ -107,6 +114,7 @@ composer refactor
 - [Rector Laravel Documentation](https://github.com/driftingly/rector-laravel)
 - [PHPStan Documentation](https://phpstan.org)
 - [Laravel Persian Validation](https://github.com/sadegh19b/laravel-persian-validation)
+- [Heroicons](https://heroicons.com/)
 
 ## 📄 License
 
