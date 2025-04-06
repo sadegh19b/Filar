@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
+use Filament\Forms\Components\Select as FilamentSelect;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -32,6 +33,7 @@ final class AppServiceProvider extends ServiceProvider
         $this->configureDates();
         $this->configureUrls();
         $this->configureVite();
+        $this->configureFilamentComponents();
     }
 
     /**
@@ -78,5 +80,15 @@ final class AppServiceProvider extends ServiceProvider
     private function configureVite(): void
     {
         Vite::useAggressivePrefetching();
+    }
+
+    /**
+     * Configure the application's filament components.
+     */
+    private function configureFilamentComponents(): void
+    {
+        FilamentSelect::configureUsing(function (FilamentSelect $select): void {
+            $select->native(false);
+        });
     }
 }
