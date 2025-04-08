@@ -30,7 +30,7 @@ Inspired from [vest-kits (laravel)](https://github.com/vest-kits/laravel) by [Nu
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/sadegh19b/larafila-starter.git
+git clone https://github.com/sadegh19b/LarafilaStarter.git
 ```
 
 2. Install PHP dependencies:
