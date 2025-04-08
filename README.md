@@ -63,11 +63,19 @@ php artisan migrate
 php artisan serve
 ```
 
-**Note**: For better performance, suggest to use the below commands to cache icons and components:
-```bash
-php artisan icons:cache
-php artisan filament:cache-components
-```
+## 📝 Notes
+
+- For better performance, suggest to use the below commands to cache icons and components:
+    ```bash
+    php artisan icons:cache
+    php artisan filament:cache-components
+    ```
+
+- You can use the google fonts for `Vazirmatn` font:
+    ```bash
+    <link href='https://fonts.googleapis.com/css?family=Vazirmatn' rel='stylesheet' />
+    ```
+    Or use the font from the `public/css/fonts/vazirmatn.css` file, for filament or views.
 
 ## 🏗 Project Structure
 
@@ -114,6 +122,7 @@ composer refactor
 - [Rector Laravel Documentation](https://github.com/driftingly/rector-laravel)
 - [PHPStan Documentation](https://phpstan.org)
 - [Laravel Persian Validation](https://github.com/sadegh19b/laravel-persian-validation)
+- [Vazirmatn Font](https://github.com/rastikerdar/vazirmatn)
 - [Heroicons](https://heroicons.com/)
 
 ## 📄 License
