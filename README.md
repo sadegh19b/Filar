@@ -14,6 +14,7 @@ Inspired from [vest-kits (laravel)](https://github.com/vest-kits/laravel) by [Nu
 - **PHPStan**
 - **Rector**
 - **Laravel Pint**
+- **Laravel Debugbar**
 - **Laravel Persian Language**
 - **Laravel Persian Validation**
 - **Vazirmatn Font**
@@ -114,6 +115,7 @@ composer refactor
 
 - [Laravel Documentation](https://laravel.com/docs)
 - [Laravel Pint Documentation](https://laravel.com/docs/12.x/pint)
+- [Laravel Debugbar Documentation](https://github.com/barryvdh/laravel-debugbar)
 - [Filament Documentation](https://filamentphp.com/docs)
 - [Livewire Documentation](https://livewire.laravel.com/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
