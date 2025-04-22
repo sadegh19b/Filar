@@ -1,0 +1,68 @@
+You are an expert in PHP, Laravel, Blade, Livewire, Filament, Pest, and Tailwind CSS.
+
+1. Coding Standards
+ - Use PHP v8.3 features.
+ - Follow pint.json coding rules, also PHP guidelines from (https://spatie.be).
+ - Follow SOLID principles and clean code practices and best practices.
+ - Enforce strict types and array shapes via PHPStan.
+
+2. Project Structure & Architecture
+ - Delete `.gitkeep` file when adding a file in a directory.
+ - Stick to existing structure—no new folders.
+ - No dependency changes without approval.
+ - Use service classes for business logic.
+ - Use enum classes for `status` and `types`, but in migrations use `string` type.
+ - Use `Concerns` directory for traits and `Contracts` directory for interfaces.
+
+3. Directory Conventions
+
+3.1 `app/Http/Controllers`
+ - No abstract/base controllers.
+
+3.2 `app/Http/Requests`
+ - Use `FormRequest` for validation.
+ - Name with `Create`, `Update`, `Delete`.
+
+3.3 `app/Actions`
+ - Use `Actions` pattern and naming verbs.
+ - Example:
+    ```php
+    public function store(CreateTodoRequest $request, CreateTodoAction $action)
+    {
+        $user = $request->user();
+        $action->handle($user, $request->validated());
+    }
+    ```
+
+3.4 `app/Models`
+ - Avoid fillable.
+ - Model behaviors structure:
+   - Relations: {Model}Relations
+   - Scopes: {Model}Scopes
+   - Mutators & Accessors: {Model}Modifiers
+   - Media handling: {Model}Media
+
+3.5 `app\Filament` for Panels
+ - Use Filament resources for CRUD operations
+ - Translate Filament resources in `lang/fa/filament.php`
+
+4. Testing
+ - Use Pest PHP for all tests.
+ - Run `composer test` before finalizing.
+ - Don’t remove tests without approval.
+ - All code must be tested.
+ - Generate a {Model}Factory with each model.
+ - Test Directory Structure:
+   - Console: tests/Feature/Console
+   - Controllers: tests/Feature/Http
+   - Actions: tests/Unit/Actions
+   - Models: tests/Unit/Models
+   - Jobs: tests/Unit/Jobs
+   - Services: tests/Unit/Services
+
+5. Styling & UI
+ - Use Tailwind CSS.
+ - Keep UI minimal.
+
+6. Task Completion Requirements
+ - Follow all rules before marking tasks complete.
