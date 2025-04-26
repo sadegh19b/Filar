@@ -1,36 +1,32 @@
 {
     "preset": "laravel",
     "rules": {
-        "array_push": true,
+        "align_multiline_comment": true,
         "backtick_to_shell_exec": true,
-        "date_time_immutable": true,
         "declare_strict_types": true,
-        "lowercase_keywords": true,
-        "lowercase_static_reference": true,
+        "explicit_indirect_variable": true,
+        "explicit_string_variable": true,
         "fully_qualified_strict_types": true,
         "global_namespace_import": {
             "import_classes": true,
             "import_constants": true,
             "import_functions": true
         },
-        "mb_str_functions": true,
+        "heredoc_indentation": true,
+        "lambda_not_used_import": false,
+        "long_to_shorthand_operator": true,
+        "modernize_strpos": true,
         "modernize_types_casting": true,
-        "new_with_parentheses": false,
         "no_superfluous_elseif": true,
         "no_useless_else": true,
-        "no_multiple_statements_per_line": true,
-        "ordered_class_elements": {
-            "order": [
-                "case",
-                "construct",
-                "destruct",
-                "magic"
-            ],
-            "sort_algorithm": "none"
-        },
+        "ordered_class_elements": true,
+        "phpdoc_add_missing_param_annotation": true,
+        "phpdoc_array_type": true,
+        "phpdoc_param_order": true,
+        "phpdoc_var_annotation_correct_order": true,
         "self_accessor": true,
-        "self_static_accessor": true,
         "strict_comparison": true,
-        "visibility_required": true
+        "use_arrow_functions": true,
+        "void_return": true
     }
 }
