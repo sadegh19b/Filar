@@ -1,6 +1,7 @@
 # Filar
 
-A starter kit for Laravel included Filament for panels, Persian language & validation, Vazirmatn font, and essential features for rapid application development.
+A starter kit for Laravel included Filament for panels, Persian language & validation, Vazirmatn font, and essential
+features for rapid application development.
 
 ## 🚀 Features
 
@@ -16,21 +17,25 @@ A starter kit for Laravel included Filament for panels, Persian language & valid
 ## 🛠 Installation & Usage
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/sadegh19b/Filar.git
 ```
 
 2. Install PHP dependencies:
+
 ```bash
 composer install
 ```
 
 3. Prepare project for ready to use:
+
 ```bash
 composer run prepare
 ```
 
 4. Start the development server:
+
 ```bash
 php artisan serve
 // or
@@ -38,6 +43,7 @@ composer run dev
 ```
 
 If you want to install NPM dependencies & run front assets, you can run:
+
 ```bash
 npm install
 npm run dev
@@ -59,10 +65,14 @@ npm run build
     ```bash
     <link href='https://fonts.googleapis.com/css?family=Vazirmatn' rel='stylesheet' />
     ```
-    Or use the font from the `public/css/fonts/vazirmatn.css` file, for filament or views.
+  Or use the font from the `public/css/fonts/vazirmatn.css` file, for filament or views.
+
+- You can use `persian_faker()` function for persian fake data in seeders.
 
 ## 🏗 Project Structure
-The project follows a flexible architecture where you can implement business logic using either Actions or Services based on your specific needs and preferences.
+
+The project follows a flexible architecture where you can implement business logic using either Actions or Services
+based on your specific needs and preferences.
 
 ```
 app/
