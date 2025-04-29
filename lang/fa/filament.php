@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 return [
     'resources' => [
@@ -9,6 +9,15 @@ return [
             'plural' => 'کاربران',
             'navigation' => 'کاربران',
             'empty_state' => 'کاربری',
+        ],
+    ],
+
+    'relations' => [
+        'test' => [
+            'singular' => 'تست',
+            'plural' => 'تست ها',
+            'title' => 'تست ها',
+            'empty_state' => 'تستی',
         ],
     ],
 
