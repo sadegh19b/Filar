@@ -39,8 +39,18 @@ return [
         'active' => 'فعال',
         'not_active' => 'غیرفعال',
         'all' => 'همه',
+        'add_item' => 'افزودن آیتم',
         'created_at' => 'تاریخ ایجاد',
         'updated_at' => 'تاریخ بروزرسانی',
+    ],
+
+    'status' => [
+        'available' => 'موجود',
+        'unavailable' => 'ناموجود',
+        'active' => 'فعال',
+        'not_active' => 'غیرفعال',
+        'yes' => 'بله',
+        'no' => 'خیر',
     ],
 
     'sections' => [
@@ -72,6 +82,10 @@ return [
     ],
 
     'messages' => [
+        //
+    ],
+
+    'notifications' => [
         //
     ],
 
