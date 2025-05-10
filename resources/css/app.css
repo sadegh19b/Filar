@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import "./fonts/vazirmatn.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -10,5 +10,5 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
-    --font-vazirmatn: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    --font-vazirmatn: 'Vazirmatn', ui-sans-serif, system-ui, sans-serif;
 }
