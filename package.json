@@ -3,7 +3,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "lint": "prettier --write resources/",
+        "test:lint": "prettier --check resources/"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
@@ -11,6 +13,9 @@
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.2.0",
         "tailwindcss": "^4.0.0",
-        "vite": "^6.2.4"
+        "vite": "^6.2.4",
+        "prettier": "^3.5.3",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-tailwindcss": "^0.6.11"
     }
 }
