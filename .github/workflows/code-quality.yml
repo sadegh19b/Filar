@@ -1,0 +1,23 @@
+name: Code Quality
+
+on: workflow_call
+
+jobs:
+  rector:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Automated Refactoring - Rector
+        run: composer run-script rector-check
+
+  phpstan:
+    runs-on: ubuntu-latest
+    container: lorisleiva/laravel-docker:8.2
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v4
+
+     - name: Check Code Analysis - PHPStan
+       run: composer run-script phpstan

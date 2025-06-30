@@ -1,0 +1,13 @@
+name: Security
+
+on: workflow_call
+
+jobs:
+  check-composer-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: checks composer.lock for known vulnerabilities in y package dependencies.
+        uses: symfonycorp/security-checker-action@v5

@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    needs: build
+    uses: ./.github/workflows/lint.yml
+
+  code-quality:
+    needs: build
+    uses: ./.github/workflows/code-quality.yml
+
+  security-checker:
+    uses: ./.github/workflows/security.yml
