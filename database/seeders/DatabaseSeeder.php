@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Fields\UserFld;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::query()->create([
+            UserFld::NAME => 'Test User',
+            UserFld::EMAIL => 'test@example.com',
+            UserFld::EMAIL_VERIFIED_AT => now(),
+            UserFld::PASSWORD => 'test',
         ]);
     }
 }

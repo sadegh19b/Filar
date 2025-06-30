@@ -1,10 +1,14 @@
+# SPanel
+
+A simple and easy panel for managing your vpn servers.
+
 ## 📦 Installation
 
-For local development.
+For local development, you can use the following command:
 
 ```
 docker compose up -d --build
-docker exec app.dev bash
+docker exec -it spanel-app-dev-1 bash
 composer i
 npm i && npm run build
 ```

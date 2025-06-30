@@ -27,7 +27,6 @@ return RectorConfig::configure()
         __DIR__.'/database',
         __DIR__.'/resources',
         __DIR__.'/routes',
-        //        __DIR__.'/tests',
     ])
     ->withSets([
         LaravelLevelSetList::UP_TO_LARAVEL_110,
