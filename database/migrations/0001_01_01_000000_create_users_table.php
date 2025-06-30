@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Fields\UserFld;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -12,7 +14,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table): void {
             $table->id();
             $table->string(UserFld::NAME);
             $table->string(UserFld::EMAIL)->unique();

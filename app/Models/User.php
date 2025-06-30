@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use App\Fields\UserFld;
@@ -11,9 +13,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable implements FilamentUser, HasName, HasAvatar
+class User extends Authenticatable implements FilamentUser, HasAvatar, HasName
 {
-    use HasFilamentUser, HasFactory, Notifiable;
+    use HasFactory, HasFilamentUser, Notifiable;
 
     protected $hidden = [
         UserFld::PASSWORD,
