@@ -9,15 +9,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup PHP Environment
+        uses: ./.github/actions/setup-php
+
       - name: Automated Refactoring - Rector
         run: composer run-script rector-check
 
   phpstan:
     runs-on: ubuntu-latest
-    container: lorisleiva/laravel-docker:8.2
     steps:
      - name: Checkout code
        uses: actions/checkout@v4
+       
+     - name: Setup PHP Environment
+       uses: ./.github/actions/setup-php
 
      - name: Check Code Analysis - PHPStan
        run: composer run-script phpstan

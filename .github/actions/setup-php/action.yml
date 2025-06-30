@@ -1,0 +1,32 @@
+name: 'Setup PHP Environment'
+description: 'Sets up PHP, installs dependencies, and configures git'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring, intl, pdo_mysql, zip, exif, pcntl, bcmath, gd
+        coverage: none
+        
+    - name: Get Composer Cache Directory
+      id: composer-cache
+      shell: bash
+      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      
+    - name: Cache Composer dependencies
+      uses: actions/cache@v3
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
+        
+    - name: Install Dependencies
+      shell: bash
+      run: composer install --no-interaction --prefer-dist
+      
+    - name: Fix Repository Ownership
+      shell: bash
+      run: git config --global --add safe.directory "$GITHUB_WORKSPACE" 

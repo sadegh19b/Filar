@@ -16,15 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          extensions: mbstring, intl, bcmath, exif, gd, pdo_mysql
-          coverage: none
-
-      - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: Setup PHP Environment
+        uses: ./.github/actions/setup-php
 
   lint:
     needs: build
