@@ -1,0 +1,33 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "backtick_to_shell_exec": true,
+        "declare_strict_types": true,
+        "explicit_indirect_variable": true,
+        "explicit_string_variable": true,
+        "fully_qualified_strict_types": true,
+        "global_namespace_import": {
+            "import_classes": true,
+            "import_constants": true,
+            "import_functions": true
+        },
+        "heredoc_indentation": true,
+        "lambda_not_used_import": false,
+        "long_to_shorthand_operator": true,
+        "modernize_strpos": true,
+        "modernize_types_casting": true,
+        "new_with_parentheses": false,
+        "no_superfluous_elseif": true,
+        "no_useless_else": true,
+        "no_unused_imports": true,
+        "ordered_class_elements": true,
+        "phpdoc_add_missing_param_annotation": true,
+        "phpdoc_array_type": true,
+        "phpdoc_param_order": true,
+        "phpdoc_var_annotation_correct_order": true,
+        "self_accessor": true,
+        "strict_comparison": true,
+        "visibility_required": true,
+        "void_return": true
+    }
+}
