@@ -60,6 +60,11 @@ You can add extra features with installing packages if needed to the project.
     composer require sadegh19b/laravel-persian-validation
     ```
 
+- **Laravel Iran Cities**: for iran cities migration & seeder files.
+    ```bash
+    composer require sadegh19b/laravel-iran-cities
+    ```
+
 - **Laravel Persian Faker**: for persian language faker data.
     ```bash
     composer require amyavari/persian-faker-php
@@ -116,7 +121,9 @@ git config --global core.fileMode false
 - [Filament](https://filamentphp.com/docs)
 - [Livewire](https://livewire.laravel.com/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)
+- [Laravel Persian Lang](https://github.com/sadegh19b/laravel-persian-lang)
 - [Laravel Persian Validation](https://github.com/sadegh19b/laravel-persian-validation)
+- [Laravel Iran Cities](https://github.com/sadegh19b/laravel-iran-cities)
 - [PHP Persian Faker](https://github.com/amyavari/persian-faker-php)
 - [Vazirmatn Font](https://github.com/rastikerdar/vazirmatn)
 - [Heroicons](https://heroicons.com/)
