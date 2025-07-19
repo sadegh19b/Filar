@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use Filament\FontProviders\LocalFontProvider;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Select;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -12,6 +14,7 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -56,5 +59,21 @@ class AdminPanelServiceProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ]);
+    }
+
+    public function boot(): void
+    {
+        Select::configureUsing(function (Select $select): void {
+            $select->native(false);
+        });
+
+        SelectFilter::configureUsing(function (SelectFilter $selectFilter): void {
+            $selectFilter->native(false);
+        });
+
+        DatePicker::configureUsing(function (DatePicker $datePicker): void {
+            $datePicker->native(false)
+                ->displayFormat('Y-m-d');
+        });
     }
 }
